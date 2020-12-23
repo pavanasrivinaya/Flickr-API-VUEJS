@@ -12,11 +12,6 @@
         </v-btn>
       </v-form>
     </nav>
-    <BgPic
-      backgroundImage="backgroundimage.jpg"
-      title="Welcome to Instaflickr"
-      subtitle="A fake photo app"
-    />
     <v-container class="wrapper">
       <v-container v-if="loading" class="progress text-centered">
         <div class="text-xs-right">
@@ -41,13 +36,11 @@
 import config from "../../config";
 import axios from "axios";
 import ImageCard from "@/components/ImageCard";
-import BgPic from "@/components/BgPic";
 
 export default {
   name: "home",
   components: {
-    ImageCard,
-    BgPic
+    ImageCard
   },
   data() {
     return {
