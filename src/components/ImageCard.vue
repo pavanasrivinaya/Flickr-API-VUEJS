@@ -5,17 +5,17 @@
       :src="image.url_n"
       :alt="image.title"
     />
-    <a
-      :href="image.url_n"
-      :alt="image.title"
-      @click.prevent="downloadItem(image)"
-    >
-      <v-icon class="iconalign">mdi-arrow-down-bold-circle-outline</v-icon>
-    </a>
     <div class="image-card__body">
       <p v-if="image.title" class="image-title">{{ image.title }}</p>
       <p v-else class="image-title">No Title Found</p>
       <p class="image-owner">By {{ image.ownername }}</p>
+      <a
+        :href="image.url_n"
+        :alt="image.title"
+        @click.prevent="downloadItem(image)"
+      >
+        <v-icon class="iconalign">mdi-arrow-down-bold-circle-outline</v-icon>
+      </a>
       <section class="image-date-view-wrapper">
         <p class="image-date">{{ image.datetaken }}</p>
         <p class="image-views">Views: {{ image.views }}</p>
@@ -52,9 +52,9 @@ export default {
 
 <style lang="scss">
 i.v-icon.notranslate.iconalign.mdi.mdi-arrow-down-bold-circle-outline.theme--light {
-  margin-left: 190px;
-  margin-top: -60px;
-  color: white;
+  margin-left: 180px;
+  margin-top: -80px;
+  color: black;
 }
 a {
   text-decoration: none;
